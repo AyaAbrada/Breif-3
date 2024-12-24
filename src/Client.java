@@ -82,6 +82,7 @@ public class Client {
                     AjouterClients();
                     break;
                 case 2:
+                    AfficherClients();
                     break;
             }
         } while (choix != 0);
@@ -100,11 +101,22 @@ public class Client {
         System.out.println("Entrer le numéro de téléphone du client");
         int telephone = scan.nextInt();
 
+        Client CLIENT = new Client (nom, prenom, email, adresse, telephone);
         client.add(new Client(nom ,  prenom,  email,  adresse, telephone));
 
         }
 
     public static void AfficherClients(){
+        if (client.isEmpty()) {
+            System.out.println("Aucun client a afficher");
+        }else {
+           for (Client CLIENT : client){
+               System.out.println(" Nom: " + CLIENT.getNom() + " Prénom " + CLIENT.getPrenom() + " Email: " + CLIENT.getEmail() + " Adresse: " + CLIENT.getAdresse() + " Numéro de téléphone " + CLIENT.getTelephone() + " Id: " + CLIENT.getId());
+
+            }
+
+
+        }
 
     }
     }
