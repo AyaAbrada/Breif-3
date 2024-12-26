@@ -1,14 +1,11 @@
 import java.util.Scanner;
 
-public abstract class Compte{
-    int Numero;
-    int Solde;
-    int Proptirtaire;
+public class Main {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner (System.in);
-        int choix ;
-        do{
+        Scanner scan = new Scanner(System.in);
+        int choix;
+        do {
             System.out.println("_______Menu_______");
             System.out.println("1. Gérer les clients");
             System.out.println("2. Gérer les comptes");
@@ -16,17 +13,17 @@ public abstract class Compte{
             System.out.println("4. Effectuer un filtrage");
             System.out.println("Entrer votre choix");
             choix = scan.nextInt();
-            switch(choix){
-                case 1 :
+            switch (choix) {
+                case 1:
                     Client.GestionClient();
                     break;
-                case 2 :
+                case 2:
                     break;
-                case 3 :
+                case 3:
                     break;
-                case 4 :
+                case 4:
                     break;
             }
-        }while(choix != 0);
+        } while (choix != 0);
     }
 }
